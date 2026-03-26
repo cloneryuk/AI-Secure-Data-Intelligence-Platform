@@ -77,7 +77,7 @@ async def _run_pipeline(content: str, input_type: str, options: AnalyzeOptions) 
     else:
         summary = "No sensitive data detected"
         
-    # Strictly match hackathon output format by omitting stack_trace from findings JSON
+
     returned_findings = [f for f in finding if f.type != "stack_trace"]
 
     return AnalyzeResponse(

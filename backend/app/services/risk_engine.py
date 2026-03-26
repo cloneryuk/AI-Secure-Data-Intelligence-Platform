@@ -13,7 +13,7 @@ def compute_risk(findings: list[Finding]) -> tuple[int, str]:
     total=0
     for f in findings:
         if f.type == "stack_trace":
-            continue # Stack trace doesn't add to numeric score in the spec
+            continue
         total+=RISK_POINTS.get(f.risk,1)
         
     if total>=15:
