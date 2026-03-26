@@ -64,6 +64,10 @@ async def observablilty_middleware(request:Request,call_next):
     response.headers["X-Process-Time-Ms"]=f"{elapsed_ms:.1f}"
     return response
 
+@app.get("/")
+async def root():
+    return {"message": "AI Secure Data Intelligence Platform API is running. Visit /docs for Swagger UI."}
+
 @app.get("/health")
 async def health():
     return {"status":"ok","service":"AI Secure Data Intelligence Platform"}
