@@ -27,7 +27,7 @@ function App() {
     formData.append('log_analysis', true)
 
     try {
-      const res = await axios.post('https://ai-secure-data.onrender.com/analyze/upload', formData)
+      const res = await axios.post('https://ai-secure-data-intelligence-platform-otc1.onrender.com/analyze/upload', formData)
       setResult(res.data)
     } catch (err) {
       setError(err.response?.data?.detail || "An error occurred during analysis.")
